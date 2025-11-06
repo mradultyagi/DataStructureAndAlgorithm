@@ -1,0 +1,15 @@
+# Ignore system files
+NTUSER.*
+*.lnk
+*.log
+.DS_Store
+Thumbs.db
+
+.idea
+out
+
+# Ignore cache and temporary files
+.cache/
+.config/
+.vscode/
+node_modules/
