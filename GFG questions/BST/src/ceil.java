@@ -22,7 +22,7 @@ public class ceil {
         }
         return root;
     }
-    static basics.Node ceil(basics.Node root, int x){
+    static basics.Node ceiling(basics.Node root, int x){
         basics.Node res = null;
         while (root != null ){
             if(root.key == x){
