@@ -24,7 +24,7 @@ public class BallmanFord {
             for (int j = 0; j < V; j++) {
 
                 if (dist[j] > dist[i] + graph[i][j]) {
-                    System.out.println("cycle detected");
+                    System.out.println("cycle detected successfully");
                 }
             }
         }
