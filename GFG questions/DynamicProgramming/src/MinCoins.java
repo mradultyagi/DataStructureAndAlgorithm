@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class MinCoins {
     static void main() {
         int[] coins = {9,6,5,1};
@@ -12,5 +14,24 @@ public class MinCoins {
         int exclude= minCoins(coins,n-1,val);
         return Math.min(include,exclude);
 
+    }
+    //DynamicProgramming
+    static int minCoinsDP(int[] coins,int n,int val){
+        int[] dp = new int[val+1];
+        for (int i = 1; i <=val+1; i++) {
+            dp[i]=Integer.MAX_VALUE;
+
+        }
+        dp[0]=0;
+        for (int i = 1; i <=val ; i++) {
+            for (int j = 0; j < n; j++) {
+                int sub_res=dp[i-dp[j]];
+                if(sub_res != Integer.MAX_VALUE)
+                    dp[i]=Math.min(dp[i],sub_res+1);
+            }
+        }
+
+
+        return dp[n];
     }
 }
