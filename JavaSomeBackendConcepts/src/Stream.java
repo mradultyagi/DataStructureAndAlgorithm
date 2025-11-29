@@ -3,24 +3,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-class student{
-    int roll;
-    int marks;
-    String name;
-
-    public student(int r,int m,String n){
-        this.marks=m;
-        this.roll=r;
-        this.name=n;
-    }
-    int getRoll() {return roll;}
-    int getMarks(){return marks;}
-    String getName(){return name;}
-    public String toString() {
-        return "{" + roll + ", " + marks + ", " + name + "}";
-    }
-}
-
 public class Stream {
     static void main(String[] args) {
         int [] arr = {10,20,30};
